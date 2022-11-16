@@ -1,0 +1,57 @@
+<div class="p-5 d-flex justify-content-center">
+    <div class="border p-3 rounded" style="width: 25rem">
+      <h3 class="text-center pb-3">Sign Up</h3>
+  
+      <form #productForm="ngForm">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            placeholder="firstName"
+            name="firstName"
+            [ngModel]="this.userService.currentUser.firstName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label">lastName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Nombre de producto"
+            name="lastName"
+            [ngModel]="this.userService.currentUser.lastName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">e-mail</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Descripcion del producto"
+            name="email"
+            [ngModel]="this.userService.currentUser.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Productos disponibles"
+            name="password"
+            [ngModel]="this.userService.currentUser.password"
+          />
+        </div>
+
+      </form>
+  
+      <button class="btn btn-success" (click)="this.createUser(productForm)">
+        Guardar
+      </button>
+    </div>
+  </div>

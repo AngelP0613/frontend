@@ -1,0 +1,15 @@
+<div class="container mt-5 d-flex justify-contnet-evenly flex-wrap">
+  <!-- card component -->
+  <!-- props -->
+  <app-card
+    *ngFor="let le of this.productService.products"
+    title=" {{le.name}}"
+    description="{{le.description}}"
+    btnColor="success"
+    btnText="comprar"
+    image="{{le.image}}"
+    [stock]="10"
+  ></app-card>
+
+ 
+</div>
